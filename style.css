@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px #0002;
+}
+
+h1 {
+    color: #5b4baf;
+}
+
+.info {
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card {
+    height: 70px;
+    border: none;
+    border-radius: 12px;
+    background: #7567d8;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card.open,
+.card.matched {
+    background: #e8e6ff;
+    color: #40358c;
+}
+
+.card.matched {
+    background: #c9f7d5;
+}
+
+button#restart {
+    margin-top: 22px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #5b4baf;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#message {
+    font-weight: bold;
+    color: #31864a;
+}
+
+@media (max-width: 350px) {
+    .card {
+        height: 55px;
+        font-size: 23px;
+    }
+}
